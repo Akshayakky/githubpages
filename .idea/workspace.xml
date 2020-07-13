@@ -21,7 +21,7 @@
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/BookStoreAPI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IdeaProjects/book-store-frontend" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -47,7 +47,7 @@
       <workItem from="1594354616921" duration="1352000" />
       <workItem from="1594533831782" duration="611000" />
       <workItem from="1594534979145" duration="657000" />
-      <workItem from="1594653016529" duration="622000" />
+      <workItem from="1594653016529" duration="1277000" />
     </task>
     <servers />
   </component>
@@ -55,10 +55,10 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1594535049381">
+    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1594654173444">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1594535049381" />
+    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1594654173444" />
     <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1594146381205">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
