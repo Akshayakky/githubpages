@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -13,6 +13,7 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import TableCell from "@material-ui/core/TableCell";
 import img from "./cracker3.png";
+import axios from "axios";
 // import {Link} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
@@ -44,13 +45,27 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
+
 export default function Order() {
     const classes = useStyles();
+    const [data, setData] = useState("")
+    useEffect(() => axios.get('http://localhost:8080/book/sorted/default/')
+        .then((results
+        ) => {
+            setData(results.data);
+        }), []
+    )
 
     return (
         <Card className={classes.root}>
             <CardActionArea style={{paddingTop: 20, marginBottom: 30}}>
                 <Grid>
+                    {
+                        (data[0] !== undefined) ?
+                            <p>{data[0].bookTitle}</p>
+                            :
+                            null
+                    }
                     <Typography variant="h6" color="inherit" align={"center"}> Your Order Has Been Placed
                         Successfully!
                     </Typography>
@@ -95,10 +110,10 @@ export default function Order() {
                     <br/>
                     <Typography align={"center"}>
                         {/*<Link to={"/"} style={{textDecoration: "none"}}>*/}
-                            <Button style={{marginBottom: 40, backgroundColor: "#990033", color: "white"}}
-                                    variant="contained" color="secondary" size={"medium"}>
-                                Continue Shopping
-                            </Button>
+                        <Button style={{marginBottom: 40, backgroundColor: "#990033", color: "white"}}
+                                variant="contained" color="secondary" size={"medium"}>
+                            Continue Shopping
+                        </Button>
                         {/*</Link>*/}
                     </Typography>
                 </CardContent>
