@@ -44,7 +44,7 @@ export default function MyOrder(props) {
     }
 
     useEffect(() => {
-        if (localStorage.getItem('key') !== undefined)
+        if (localStorage.getItem('key') !== null && localStorage.getItem('key') !== undefined && localStorage.getItem('key') !== "")
             Axios.get('http://localhost:8080/order', headers)
                 .then((response) => {
                     setOrderDetails(response)

@@ -61,7 +61,7 @@ export default function PrimarySearchAppBar(props) {
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
-    const isLoggedIn = props.login || localStorage.getItem('key') !== ""
+    const isLoggedIn = props.login || (localStorage.getItem('key') !== null && localStorage.getItem('key') !== undefined && localStorage.getItem('key') !== "")
 
     const handleChange = (event) => {
         props.setSearch(event.target.value)
@@ -164,7 +164,7 @@ export default function PrimarySearchAppBar(props) {
                                 </Link> :
                                 null
                             }
-                            {localStorage.getItem('key') !== "" ?
+                            {localStorage.getItem('key') !== null && localStorage.getItem('key') !== undefined && localStorage.getItem('key') !== "" ?
                                 <MenuItem onClick={setTokenInStorage.bind(this)}>Sign Out</MenuItem>
                                 :
                                 <Link to="/login" style={{textDecoration: "none", color: "black"}}>
