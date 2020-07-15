@@ -79,7 +79,7 @@ export default function ForgotPassword(props) {
     return (
         <Container component="main" maxWidth="xs">
             {login ?
-                <Redirect to={"/"}/> : null
+                <Redirect to={"/githubpages"}/> : null
             }
             <CssBaseline/>
             <div className={classes.paper}>

@@ -95,7 +95,7 @@ export default function MyOrder(props) {
                             :
                             <div>
                                 <br/>
-                                <Link to={"/"} style={{textDecoration: "none"}}>
+                                <Link to={"/githubpages"} style={{textDecoration: "none"}}>
                                     <Button
                                         variant="contained"
                                         style={{backgroundColor: "#990033", color: "white", marginLeft: 30}}

@@ -86,7 +86,7 @@ export default function PrimarySearchAppBar(props) {
         <div className={classes.grow}>
             <AppBar position="static" style={{background: '#990033'}}>
                 <Toolbar>
-                    <Link to={"/"} style={{color: "white"}}>
+                    <Link to={"/githubpages"} style={{color: "white"}}>
                         <MenuBookIcon className={classes.bookIcon}/>
                     </Link>
                     <Typography className={classes.title} variant="h6" noWrap>

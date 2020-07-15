@@ -59,7 +59,7 @@ export default function Login(props) {
     return (
         <Container component="main" maxWidth="xs">
             {login ?
-                <Redirect to={"/"}/> : null
+                <Redirect to={"/githubpages"}/> : null
             }
             <CssBaseline/>
             <div className={classes.paper}>
@@ -104,7 +104,7 @@ export default function Login(props) {
                     {/*    label="Remember me"*/}
                     {/*/>*/}
                     {login ?
-                        <Link to={"/"}>
+                        <Link to={"/githubpages"}>
                             <Button
                                 type="submit"
                                 fullWidth
