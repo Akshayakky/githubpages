@@ -60,7 +60,8 @@ export default function () {
     const jwtDecoder = require("jsonwebtoken")
 
     useEffect(() => {
-        if (localStorage.getItem('key') !== "")
+        if (localStorage.getItem('key') !== "" ) {
+            console.log(localStorage.getItem('key'))
             console.log(jwtDecoder.decode(localStorage.getItem('key')))
             Axios.get("http://localhost:8080/user?email=" + jwtDecoder.decode(localStorage.getItem('key')).sub)
                 .then((response) => {
@@ -68,6 +69,7 @@ export default function () {
                         setUser(response.data)
                     }
                 )
+        }
         setJwt(localStorage.getItem('jwt'))
     }, [login])
 
