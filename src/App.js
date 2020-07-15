@@ -61,6 +61,7 @@ export default function () {
 
     useEffect(() => {
         if (localStorage.getItem('key') !== "")
+            console.log(jwtDecoder.decode(localStorage.getItem('key')))
             Axios.get("http://localhost:8080/user?email=" + jwtDecoder.decode(localStorage.getItem('key')).sub)
                 .then((response) => {
                         console.log("loaded user")
