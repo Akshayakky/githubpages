@@ -96,7 +96,7 @@ export default function PrimarySearchAppBar(props) {
                         <div className={classes.searchIcon}>
                             <SearchIcon/>
                         </div>
-                        <Link to={"/"} style={{textDecoration: "none"}}>
+                        <Link to={"/githubpages"} style={{textDecoration: "none"}}>
                             <InputBase
                                 placeholder="Search…"
                                 classes={{
