@@ -106,7 +106,7 @@ export default function CardGrid(props) {
     const jwtDecoder = require("jsonwebtoken")
 
     useEffect(() => {
-        axios.get('http://localhost:8080/book/sorted/default/' + props.search)
+        axios.get('https://infinite-springs-47602.herokuapp.com/get-all')
             .then((results) => {
                 setBookData(results.data);
             }).catch((error) => {
@@ -155,7 +155,7 @@ export default function CardGrid(props) {
     }
 
     const handleSort = (event) => {
-        axios.get('https://infinite-springs-47602.herokuapp.com/get-all')
+        axios.get('http://localhost:8080/book/sorted/' + event.target.value + "/" + props.search)
             .then((results
             ) => {
                 setBookData(results.data);
