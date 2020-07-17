@@ -155,7 +155,7 @@ export default function CardGrid(props) {
     }
 
     const handleSort = (event) => {
-        axios.get('http://localhost:8080/book/sorted/' + event.target.value + "/" + props.search)
+        axios.get('https://infinite-springs-47602.herokuapp.com/get-all')
             .then((results
             ) => {
                 setBookData(results.data);
