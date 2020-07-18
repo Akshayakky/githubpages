@@ -59,7 +59,7 @@ export default function ForgotPassword(props) {
         },
         validationSchema,
         onSubmit: values => {
-            Axios.put("http://localhost:8080/user", {
+            Axios.put("https://d-bookstore.herokuapp.com/user", {
                 email: props.user.email, password: values.password
                 , firstName: props.user.firstName, lastName: props.user.lastName
             }, headers).then((response => {

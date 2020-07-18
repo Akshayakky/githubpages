@@ -51,9 +51,9 @@ export default function ForgotPassword(props) {
         validationSchema,
         onSubmit: values => {
             setLoading(true);
-            Axios.get("http://localhost:8080/user?email=" + values.email)
+            Axios.get("https://d-bookstore.herokuapp.com/user?email=" + values.email)
                 .then((response) => {
-                        Axios.post("http://localhost:8080/mail-sender/forget-password", {
+                        Axios.post("https://d-bookstore.herokuapp.com/mail-sender/forget-password", {
                             email: values.email,
                             password: response.data.password,
                             name: response.data.firstName

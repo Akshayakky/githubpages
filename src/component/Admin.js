@@ -52,7 +52,7 @@ export default function Admin() {
         },
         onSubmit: values => {
             setLoading(true)
-            Axios.post("http://localhost:8080/book", formik.values, headers).then((response) => {
+            Axios.post("https://d-bookstore.herokuapp.com/book", formik.values, headers).then((response) => {
                 if (response.status === 200) {
                     setBookAdd(true)
                     setLoading(false)

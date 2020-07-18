@@ -43,7 +43,7 @@ export default function Login(props) {
             password: ''
         },
         onSubmit: values => {
-            Axios.post('http://localhost:8080/authenticate', formik.values)
+            Axios.post('https://d-bookstore.herokuapp.com/authenticate', formik.values)
                 .then(response => {
                     localStorage.setItem('key', response.data.jwt)
                     localStorage.setItem('userEmail', formik.values.email)

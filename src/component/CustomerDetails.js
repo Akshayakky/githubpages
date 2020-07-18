@@ -70,13 +70,13 @@ export default function CustomerDetails(props) {
         },
         onSubmit: values => {
             if (update) {
-                Axios.put('http://localhost:8080/customer/' + customerId, formik.values, headers)
+                Axios.put('https://d-bookstore.herokuapp.com/customer/' + customerId, formik.values, headers)
                     .then(response => {
                         props.onClick()
                     })
                 setEdit(true)
             } else {
-                Axios.post('http://localhost:8080/customer', formik.values, headers)
+                Axios.post('https://d-bookstore.herokuapp.com/customer', formik.values, headers)
                     .then(response => {
                         setCustomerId(response.data.customerId)
                         props.onClick()

@@ -45,7 +45,7 @@ export default function MyOrder(props) {
 
     useEffect(() => {
         if (localStorage.getItem('key') !== null && localStorage.getItem('key') !== undefined && localStorage.getItem('key') !== "")
-            Axios.get('http://localhost:8080/order', headers)
+            Axios.get('https://d-bookstore.herokuapp.com/order', headers)
                 .then((response) => {
                     setOrderDetails(response)
                 })
@@ -69,7 +69,7 @@ export default function MyOrder(props) {
     }
 
     useEffect(() => {
-        Axios.get("http://localhost:8080/book/get-books-by-id?ids=" + bookId, headers).then((result) => {
+        Axios.get("https://d-bookstore.herokuapp.com/book/get-books-by-id?ids=" + bookId, headers).then((result) => {
             setBooks(result.data)
         })
     }, [orderDetails]);

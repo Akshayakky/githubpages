@@ -72,8 +72,8 @@ export default function SignUp() {
         onSubmit: values => {
             setLoading(true)
             Axios.all([
-                Axios.post("http://localhost:8080/user", values),
-                Axios.post("http://localhost:8080/mail-sender/register", {
+                Axios.post("https://d-bookstore.herokuapp.com/user", values),
+                Axios.post("https://d-bookstore.herokuapp.com/mail-sender/register", {
                     name: values.firstName,
                     email: values.email
                 })

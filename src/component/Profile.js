@@ -47,7 +47,7 @@ export default function Profile(props) {
     const handleChange = () => {
         setEdit(!edit)
         if (edit)
-            Axios.put("http://localhost:8080/user", {
+            Axios.put("https://d-bookstore.herokuapp.com/user", {
                 firstName: firstName, lastName: lastName, password: props.user.password, role: props.user.role
             }, headers).then((response) => {
                 // eslint-disable-next-line no-restricted-globals
