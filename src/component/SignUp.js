@@ -72,6 +72,7 @@ export default function SignUp() {
         onSubmit: values => {
             setLoading(true)
             Axios.all([
+                console.log(values),
                 Axios.post("https://d-bookstore.herokuapp.com/user", values),
                 Axios.post("https://d-bookstore.herokuapp.com/mail-sender/register", {
                     name: values.firstName,
