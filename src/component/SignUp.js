@@ -70,9 +70,9 @@ export default function SignUp() {
         },
         validationSchema,
         onSubmit: values => {
+            console.log("hello : " + values)
             setLoading(true)
             Axios.all([
-                console.log(values),
                 Axios.post("https://d-bookstore.herokuapp.com/user", values),
                 Axios.post("https://d-bookstore.herokuapp.com/mail-sender/register", {
                     name: values.firstName,
