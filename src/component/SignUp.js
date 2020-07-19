@@ -70,7 +70,7 @@ export default function SignUp() {
         },
         validationSchema,
         onSubmit: values => {
-            console.log("hello : " + values)
+            console.log("hello : " + JSON.stringify(values))
             setLoading(true)
             Axios.all([
                 Axios.post("https://d-bookstore.herokuapp.com/user", values),
