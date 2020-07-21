@@ -79,6 +79,7 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         marginTop: '3.1%',
+        paddingLeft : 15,
         float: "left",
         [theme.breakpoints.up('md')]: {
             marginLeft: theme.spacing(24),

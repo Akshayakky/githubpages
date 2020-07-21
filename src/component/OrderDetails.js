@@ -21,6 +21,9 @@ const useStyles = makeStyles((theme) => ({
         width: 100,
         height: 128,
     },
+    cart: {
+        paddingLeft : 20
+    }
 }));
 
 export default function OrderDetails(props) {
@@ -38,7 +41,7 @@ export default function OrderDetails(props) {
         <div className={classes.root}>
             <Paper className={classes.paper} variant="outlined">
                 <div>
-                    <Grid container spacing={3}>
+                    <Grid container spacing={3} className={(props.page === "orderSummary")?classes.cart : null}>
                         <Grid item>
                             <img className={classes.img} alt="complex" src={image}/>
                         </Grid>
