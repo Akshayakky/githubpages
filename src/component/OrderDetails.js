@@ -41,6 +41,9 @@ export default function OrderDetails(props) {
         <div className={classes.root}>
             <Paper className={classes.paper} variant="outlined">
                 <div>
+                    <Grid item direction="column">
+                        <h3>{props.orderDate}</h3>
+                    </Grid>
                     <Grid container spacing={3} className={(props.page === "orderSummary")?classes.cart : null}>
                         <Grid item>
                             <img className={classes.img} alt="complex" src={image}/>
