@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     mediaContainer: {
         backgroundColor: '#f2f2f2',
         boxShadow: 'none',
+        width :120,
         borderRadius: 0,
         [theme.breakpoints.up('md')]: {
             minWidth: 150,
@@ -52,11 +53,14 @@ const useStyles = makeStyles((theme) => ({
         marginRight: 5
     },
     text: {
-        marginLeft: 20
+        [theme.breakpoints.up('sm')]: {
+            marginLeft : 30,
+        },
+        border: "1px solid #d9d9d9",
     }
 }));
 
-export default function CardData(props) {
+export default function CartData(props) {
     const classes = useStyles();
     const [quantity, setQuantity] = React.useState(props.quantity);
 

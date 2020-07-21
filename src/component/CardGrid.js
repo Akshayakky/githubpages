@@ -200,6 +200,11 @@ export default function CardGrid(props) {
             </FormControl>
             <Container className={classes.cardGrid} maxWidth="md">
                 <Grid container spacing={3}>
+                    {(bookData===undefined || bookData === "" || bookData === null) ?
+                        <h3>Loading books...</h3>
+                        :
+                        null
+                    }
                     {cards.map((card, i) => <Grid item key={card} xs={12} sm={6} md={3}>
                         {addedToCart = true}
                         <Card className={classes.card}>
